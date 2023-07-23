@@ -1,0 +1,201 @@
+:root {
+  /* color */
+
+  --primary-color: hsl(4, 100%, 67%);
+
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoalgrey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Font Size */
+
+  --primary-font: 16px;
+
+  /* Font Weight */
+
+  --weight-bold: 700;
+  --weight-medium: 400;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  /* text-align: center; */
+}
+
+.container {
+  display: flex;
+  background-color: var(--white);
+  border-radius: 20px;
+  padding: 20px;
+  gap: 30px;
+}
+
+.signupdetail {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.signupinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signupinfo h1 {
+  color: var(--dark-slate-grey);
+}
+
+.signupinfo p {
+  color: var(--charcoalgrey);
+  font-size: var(--primary-font);
+  margin: 10px;
+}
+
+.checkbox {
+  width: 100%;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.listSuccess {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+
+.emailbox {
+  width: 100%;
+}
+
+.emailbox form {
+  display: flex;
+  flex-direction: column;
+}
+
+.labelEmail {
+  color: var(--dark-slate-grey);
+  display: flex;
+  justify-content: space-between;
+}
+
+.emailbox form input {
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.emailbox .inputemail {
+  background-color: var(--white);
+  border: 1px solid var(--grey);
+  color: var(--charcoalgrey);
+}
+
+.emailbox .subscribe {
+  background-color: var(--dark-slate-grey);
+}
+
+.errortext {
+  color: red;
+}
+
+.emailbox .inputemail.error-border {
+  border: 1px solid var(--primary-color);
+  background-color: hsla(4, 100%, 67%, 0.2);
+}
+.emailbox .inputemail.error-border::placeholder {
+  color: var(--primary-color);
+}
+
+.signupimg {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signupimg .rightImg {
+  width: 100%;
+  object-fit: cover;
+}
+
+.signupimg .rightImgMobile {
+  display: none;
+}
+
+.thank-card {
+  width: 300px;
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.thank-card img {
+  margin-bottom: 0px;
+}
+
+.thank-card h1 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  color: var(--charcoalgrey);
+}
+
+.thank-card p {
+  margin-top: 0px;
+  color: var(--dark-slate-grey);
+}
+.thank-card button {
+  width: 100%;
+  padding: 15px;
+}
+
+.propEmail {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    padding: 0px 0px 30px 0px;
+    gap: 0px;
+  }
+
+  .signupdetail {
+    order: 2;
+  }
+
+  .signupdetail h1 {
+    text-align: center;
+  }
+
+  .signupinfo {
+    padding: 20px;
+  }
+
+  .signupimg {
+    order: 1;
+  }
+
+  .signupimg .rightImg {
+    display: none;
+  }
+
+  .signupimg .rightImgMobile {
+    display: block;
+    width: 100%;
+  }
+
+  .thank-card {
+    scale: 0.8;
+  }
+}
